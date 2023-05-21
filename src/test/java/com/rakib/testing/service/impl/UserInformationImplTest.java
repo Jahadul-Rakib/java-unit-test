@@ -25,13 +25,12 @@ public class UserInformationImplTest {
     @Order(1)
     @DisplayName("add to user in db")
     void addUser() {
-        Mockito.when(informationRepository.save(Mockito.any()))
-                .thenReturn(UserInformation.builder()
-                        .ID(new ObjectId())
-                        .userName("Test-One")
-                        .userPhoneNumber("016800023583")
-                        .userHomeDistrict("DHAKA")
-                        .build());
+        Mockito.when(informationRepository.save(Mockito.any())).thenReturn(UserInformation.builder()
+                .ID(new ObjectId())
+                .userName("Test-One")
+                .userPhoneNumber("016800023583")
+                .userHomeDistrict("DHAKA")
+                .build());
         UserRequestDTO requestDTO = UserRequestDTO.builder()
                 .userName("Test-One")
                 .userPhoneNumber("016800023583")
