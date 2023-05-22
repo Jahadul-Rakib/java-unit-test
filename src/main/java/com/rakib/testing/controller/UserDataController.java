@@ -21,6 +21,7 @@ public class UserDataController {
 
     @GetMapping("{district}")
     public ResponseEntity<?> getUser(@PathVariable("district") String district) {
+        System.out.println("come to the controller");
         return ResponseEntity.ok(userInformationService.getUserByDistrict(district));
     }
 }
